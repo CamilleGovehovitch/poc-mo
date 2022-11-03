@@ -1,0 +1,52 @@
+.bckg {
+  background-color: #ffb5ff;
+  height: 100vh;
+  width: 100vw;
+}
+.bckg .main {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.bckg .main .social-network {
+  margin-right: 10px;
+}
+.bckg .main .social-network ul {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.bckg .main .social-network ul li a {
+  transition: color 300ms ease-in-out;
+  color: black;
+}
+.bckg .main .social-network ul li a i {
+  font-size: 100px;
+}
+.bckg .main .social-network ul li a:hover {
+  color: red;
+}
+.bckg .main .video-container .video {
+  margin-bottom: 20px;
+}
+.bckg .main .video-container .video iframe {
+  width: 900px;
+  height: 500px;
+}
+.bckg .main .video-container .entity-link {
+  display: flex;
+  justify-content: center;
+}
+.bckg .main .video-container .entity-link a {
+  font-size: 25px;
+  text-decoration: none;
+  color: black;
+  transition: color 300ms ease-in-out;
+}
+.bckg .main .video-container .entity-link a:hover {
+  color: red;
+}
+
+/*# sourceMappingURL=style.css.map */
