@@ -1,46 +1,126 @@
 .uk-cover-container{
   height: 100vh;
-  .video-entity-container {
-    .video-container {
-      height: 100%;
-      width: 100%;
-    }
-    .entity-link {
-      bottom: 200px;
-      a {
-        text-decoration: none;
-        color: white;
+  .super-container {
+    height: 100%;
+    width: 100%;
+    .video-entity-container {
+      .video-container {
+        height: 100%;
+        width: 100%;
       }
-      @media (min-width: 425px) {
-        bottom: 190px;
-      }
-      @media (min-width: 768px) {
-        bottom: 100px;
-      }
-    }
-  }
-  .social-network {
-    bottom: 150px;
-    ul {
-      li {
-        margin-right: 10px;
+      .entity-link {
+        bottom: 200px;
         a {
           text-decoration: none;
           color: white;
-          i {
-            font-size: 25px;
+          transition: color 250ms ease-in-out;
+          &:hover {
+            color: red;
           }
+        }
+        @media (min-width: 425px) {
+          bottom: 190px;
+        }
+        @media (min-width: 768px) {
+          bottom: 160px;
+          font-size: 35px;
         }
       }
     }
-    @media (min-width: 425px) {
-      bottom: 125px;
+    .social-network {
+      bottom: 150px;
+      ul {
+        display: flex;
+        li {
+          margin-right: 10px;
+          a {
+            text-decoration: none;
+            color: white;
+            transition: color 250ms ease-in-out;
+            &:hover {
+              color: red;
+            }
+            i {
+              font-size: 25px;
+              @media (min-width: 768px) {
+                font-size: 40px;
+              }
+            }
+          }
+        }
+      }
+      @media (min-width: 425px) {
+        bottom: 125px;
+      }
+      @media (min-width: 768px) {
+        bottom: 105px;
+      }
     }
   }
 }
 
-.test {
-  @media (min-width: 768px) {
-    display: flex;
-  }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .uk-cover-container{
+//   height: 100vh;
+//   .video-entity-container {
+//     .video-container {
+//       height: 100%;
+//       width: 100%;
+//     }
+//     .entity-link {
+//       bottom: 200px;
+//       a {
+//         text-decoration: none;
+//         color: white;
+//       }
+//       @media (min-width: 425px) {
+//         bottom: 190px;
+//       }
+//       @media (min-width: 768px) {
+//         bottom: 100px;
+//       }
+//     }
+//   }
+//   .social-network {
+//     bottom: 150px;
+//     ul {
+//       display: flex;
+//       li {
+//         margin-right: 10px;
+//         a {
+//           text-decoration: none;
+//           color: white;
+//           i {
+//             font-size: 25px;
+//           }
+//         }
+//       }
+//     }
+//     @media (min-width: 425px) {
+//       bottom: 125px;
+//     }
+//   }
+// }

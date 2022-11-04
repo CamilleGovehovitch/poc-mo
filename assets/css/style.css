@@ -1,49 +1,69 @@
 .uk-cover-container {
   height: 100vh;
 }
-.uk-cover-container .video-entity-container .video-container {
+.uk-cover-container .super-container {
   height: 100%;
   width: 100%;
 }
-.uk-cover-container .video-entity-container .entity-link {
+.uk-cover-container .super-container .video-entity-container .video-container {
+  height: 100%;
+  width: 100%;
+}
+.uk-cover-container .super-container .video-entity-container .entity-link {
   bottom: 200px;
 }
-.uk-cover-container .video-entity-container .entity-link a {
+.uk-cover-container .super-container .video-entity-container .entity-link a {
   text-decoration: none;
   color: white;
+  transition: color 250ms ease-in-out;
+}
+.uk-cover-container .super-container .video-entity-container .entity-link a:hover {
+  color: red;
 }
 @media (min-width: 425px) {
-  .uk-cover-container .video-entity-container .entity-link {
+  .uk-cover-container .super-container .video-entity-container .entity-link {
     bottom: 190px;
   }
 }
 @media (min-width: 768px) {
-  .uk-cover-container .video-entity-container .entity-link {
-    bottom: 100px;
+  .uk-cover-container .super-container .video-entity-container .entity-link {
+    bottom: 160px;
+    font-size: 35px;
   }
 }
-.uk-cover-container .social-network {
+.uk-cover-container .super-container .social-network {
   bottom: 150px;
 }
-.uk-cover-container .social-network ul li {
+.uk-cover-container .super-container .social-network ul {
+  display: flex;
+}
+.uk-cover-container .super-container .social-network ul li {
   margin-right: 10px;
 }
-.uk-cover-container .social-network ul li a {
+.uk-cover-container .super-container .social-network ul li a {
   text-decoration: none;
   color: white;
+  transition: color 250ms ease-in-out;
 }
-.uk-cover-container .social-network ul li a i {
+.uk-cover-container .super-container .social-network ul li a:hover {
+  color: red;
+}
+.uk-cover-container .super-container .social-network ul li a i {
   font-size: 25px;
 }
+@media (min-width: 768px) {
+  .uk-cover-container .super-container .social-network ul li a i {
+    font-size: 40px;
+  }
+}
 @media (min-width: 425px) {
-  .uk-cover-container .social-network {
+  .uk-cover-container .super-container .social-network {
     bottom: 125px;
   }
 }
-
 @media (min-width: 768px) {
-  .test {
-    display: flex;
+  .uk-cover-container .super-container .social-network {
+    bottom: 105px;
   }
 }
 
