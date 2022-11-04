@@ -9,6 +9,11 @@
   height: 100%;
   width: 100%;
 }
+@media (min-width: 768px) {
+  .uk-cover-container .super-container .video-entity-container .video-container video {
+    width: 60%;
+  }
+}
 .uk-cover-container .super-container .video-entity-container .entity-link {
   bottom: 200px;
 }
@@ -27,7 +32,7 @@
 }
 @media (min-width: 768px) {
   .uk-cover-container .super-container .video-entity-container .entity-link {
-    bottom: 160px;
+    bottom: 80px;
     font-size: 35px;
   }
 }
@@ -63,7 +68,7 @@
 }
 @media (min-width: 768px) {
   .uk-cover-container .super-container .social-network {
-    bottom: 105px;
+    bottom: 30px;
   }
 }
 

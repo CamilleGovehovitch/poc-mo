@@ -7,6 +7,11 @@
       .video-container {
         height: 100%;
         width: 100%;
+        video {
+          @media (min-width: 768px) {
+            width: 60%;
+          }
+        }
       }
       .entity-link {
         bottom: 200px;
@@ -22,7 +27,7 @@
           bottom: 190px;
         }
         @media (min-width: 768px) {
-          bottom: 160px;
+          bottom: 80px;
           font-size: 35px;
         }
       }
@@ -53,74 +58,8 @@
         bottom: 125px;
       }
       @media (min-width: 768px) {
-        bottom: 105px;
+        bottom: 30px;
       }
     }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// .uk-cover-container{
-//   height: 100vh;
-//   .video-entity-container {
-//     .video-container {
-//       height: 100%;
-//       width: 100%;
-//     }
-//     .entity-link {
-//       bottom: 200px;
-//       a {
-//         text-decoration: none;
-//         color: white;
-//       }
-//       @media (min-width: 425px) {
-//         bottom: 190px;
-//       }
-//       @media (min-width: 768px) {
-//         bottom: 100px;
-//       }
-//     }
-//   }
-//   .social-network {
-//     bottom: 150px;
-//     ul {
-//       display: flex;
-//       li {
-//         margin-right: 10px;
-//         a {
-//           text-decoration: none;
-//           color: white;
-//           i {
-//             font-size: 25px;
-//           }
-//         }
-//       }
-//     }
-//     @media (min-width: 425px) {
-//       bottom: 125px;
-//     }
-//   }
-// }
