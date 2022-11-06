@@ -24,11 +24,18 @@
     .video-entity-container {
       margin-bottom: 30px;
       .video-container {
+        width: 300px;
         display: flex;
         justify-content: center;
         margin-bottom: 20px;
         video {
           border-radius: 20px;
+        }
+        @media (min-width: 768px) {
+          width: 600px;
+        }
+        @media (min-width: 1024px) {
+          width: 640px;
         }
       }
       .entity-container {
@@ -78,88 +85,3 @@
     }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// .uk-cover-container{
-//   height: 100vh;
-//   .super-container {
-//     height: 100%;
-//     width: 100%;
-//     .video-entity-container {
-//       .video-container {
-//         height: 100%;
-//         width: 100%;
-//         video {
-//           @media (min-width: 768px) {
-//             width: 60%;
-//           }
-//         }
-//       }
-//       .entity-link {
-//         bottom: 200px;
-//         a {
-//           text-decoration: none;
-//           color: white;
-//           transition: color 250ms ease-in-out;
-//           &:hover {
-//             color: red;
-//           }
-//         }
-//         @media (min-width: 425px) {
-//           bottom: 190px;
-//         }
-//         @media (min-width: 768px) {
-//           bottom: 80px;
-//           font-size: 35px;
-//         }
-//       }
-//     }
-//     .social-network {
-//       bottom: 150px;
-//       ul {
-//         display: flex;
-//         li {
-//           margin-right: 10px;
-//           a {
-//             text-decoration: none;
-//             color: white;
-//             transition: color 250ms ease-in-out;
-//             &:hover {
-//               color: red;
-//             }
-//             i {
-//               font-size: 25px;
-//               @media (min-width: 768px) {
-//                 font-size: 40px;
-//               }
-//             }
-//           }
-//         }
-//       }
-//       @media (min-width: 425px) {
-//         bottom: 125px;
-//       }
-//       @media (min-width: 768px) {
-//         bottom: 30px;
-//       }
-//     }
-//   }
-// }

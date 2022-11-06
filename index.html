@@ -5,8 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="./assets/image/favicon.ico">
+  <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
   <link rel="stylesheet" href="./assets/css/reset.css">
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/prefixed/style.css">
   <title>Bonne année</title>
 </head>
 <body>
@@ -15,7 +16,24 @@
     <div class="super-container">
       <div class="video-entity-container" id="videoEntityContainer">
         <div class="video-container">
-          <video src="./assets/video/WhatsApp.mp4" controls autoplay muted uk-video></video>
+          <!-- <video controls autoplay muted id="videoPlayer">
+            <source src="./assets/video/WhatsApp.mp4" type="video/mp4">
+          </video> -->
+          <video
+          id="my-video"
+          class="video-js"
+          controls
+          preload="auto"
+          width="640"
+          height="264"
+          poster="assets/image/45150033_703019846751290_6818328150825500672_n.jpg"
+          data-setup="{}"
+          >
+          <source src="assets/video/WhatsApp.mp4" type="video/mp4" />
+          <a href="https://videojs.com/html5-video-support/" target="_blank"
+          >KLM</a
+        >          
+      </video>
         </div>
         <div class="entity-container">
           <a href="https://www.klm.fr/">KLM</a>
@@ -42,6 +60,7 @@
       </div>
     </div>
   </div>
+  <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
   <script src="assets/js/index.js" type="text/javascript"></script>
   <script src="https://kit.fontawesome.com/187870b032.js" crossorigin="anonymous"></script>
   <script>
