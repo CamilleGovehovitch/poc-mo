@@ -6,7 +6,7 @@
   height: 100vh;
   width: 100vw;
 }
-.bckg img {
+.bckg .background-img {
   position: fixed;
   right: 0;
   bottom: 0;
@@ -29,12 +29,46 @@
 }
 .bckg .super-container .video-entity-container .video-container {
   width: 300px;
+  height: 300px;
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
 }
-.bckg .super-container .video-entity-container .video-container video {
-  border-radius: 20px;
+.bckg .super-container .video-entity-container .video-container .video-player {
+  border-image: url(https://www.onlygfx.com/wp-content/uploads/2020/01/gold-picture-frame-1-300x220.png) 20;
+  border-style: solid;
+  border-width: 20px;
+  height: 100%;
+  width: 250px;
+  overflow: hidden;
+  background-color: black;
+  position: relative;
+}
+.bckg .super-container .video-entity-container .video-container .video-player video {
+  width: 100%;
+  height: 100%;
+}
+.bckg .super-container .video-entity-container .video-container .video-player i {
+  font-size: 50px;
+  z-index: 999;
+  color: #338FBE;
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  transition: color 350ms ease-in-out;
+}
+.bckg .super-container .video-entity-container .video-container .video-player i:hover {
+  color: #133445;
+}
+@media (min-width: 768px) {
+  .bckg .super-container .video-entity-container .video-container .video-player {
+    width: 600px;
+  }
+}
+@media (min-width: 1024px) {
+  .bckg .super-container .video-entity-container .video-container .video-player {
+    width: 600px;
+  }
 }
 @media (min-width: 768px) {
   .bckg .super-container .video-entity-container .video-container {
@@ -52,11 +86,14 @@
 .bckg .super-container .video-entity-container .entity-container a {
   text-decoration: none;
   color: white;
-  font-size: 25px;
-  transition: color 250ms ease-in-out;
 }
-.bckg .super-container .video-entity-container .entity-container a:hover {
-  color: red;
+.bckg .super-container .video-entity-container .entity-container a .klm {
+  width: 200px;
+}
+@media (min-width: 768px) {
+  .bckg .super-container .video-entity-container .entity-container a .klm {
+    width: 300px;
+  }
 }
 .bckg .super-container .social-network ul {
   display: flex;
@@ -95,6 +132,25 @@
   .bckg .super-container {
     flex-direction: row-reverse;
   }
+}
+
+.reflect {
+  border-image: url(https://www.onlygfx.com/wp-content/uploads/2020/01/gold-picture-frame-1-300x220.png) 20;
+  border-style: solid;
+  border-width: 20px;
+  width: 250px;
+  margin: auto;
+  transform: rotatex(180deg) translatey(15px);
+  -webkit-mask-image: linear-gradient(transparent 50%, white 90%);
+}
+@media (min-width: 768px) {
+  .reflect {
+    width: 600px;
+  }
+}
+
+.playing {
+  opacity: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

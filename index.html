@@ -8,43 +8,40 @@
   <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
   <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="./assets/css/prefixed/style.css">
+  <!-- <link rel="stylesheet" href="./assets/css/style.css"> -->
   <title>Bonne année</title>
 </head>
 <body>
   <div class="bckg">
-    <img src="./assets/image/stars-sky.gif" alt="">
+    <img src="./assets/image/stars-sky.gif" alt="" class="background-img">
     <div class="super-container">
       <div class="video-entity-container" id="videoEntityContainer">
-        <div class="video-container">
-          <!-- <video controls autoplay muted id="videoPlayer">
+        <div class="video-container" id="videoContainer">
+          <div class="video-player">
+            <video 
+              playsinline
+              preload="auto"
+              id="videoPlayer"
+              poster="./assets/image/carre-noir.png"
+            >
             <source src="./assets/video/WhatsApp.mp4" type="video/mp4">
-          </video> -->
-          <video
-          id="my-video"
-          class="video-js"
-          controls
-          playsinline
-          preload="auto"
-          width="640"
-          height="264"
-          poster="assets/image/45150033_703019846751290_6818328150825500672_n.jpg"
-          data-setup="{}"
-          >
-          <source src="assets/video/WhatsApp.mp4" type="video/mp4" />
-          <a href="https://videojs.com/html5-video-support/" target="_blank"
-          >KLM</a
-        >          
-      </video>
+            </video> 
+            <i class="fas fa-play" id="playBtn"></i>
+          </div>
+        </div>
+        <div class="reflect">
         </div>
         <div class="entity-container">
-          <a href="https://www.klm.fr/">KLM</a>
+          <a href="https://www.klm.fr/">
+            <img src="./assets/image/AFIKLMEM_LOGO.png" alt="" class="klm">
+          </a>
         </div>
       </div>
-      <div class="social-network">
+      <!-- <div class="social-network">
         <ul>
           <li>
             <a href="https://www.klm.fr/">
-              <i class="fab fa-instagram-square"></i>
+              <i class="fab fa-twitter-square social-icons"></i>
             </a>
           </li>
           <li>
@@ -58,7 +55,7 @@
             </a>
           </li>
         </ul>
-      </div>
+      </div> -->
     </div>
   </div>
   <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
