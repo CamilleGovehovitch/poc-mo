@@ -50,12 +50,23 @@
         display: block;
 
         .video-player {
-          display: block;
+          position: relative;
           width: 750px;
           border-image: url(https://www.onlygfx.com/wp-content/uploads/2020/01/gold-picture-frame-1-300x220.png) 20;
           border-style: solid;
           border-width: 20px;
           margin-bottom: 40px;
+          i {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            font-size: 30px;
+            color: #338FBE;
+            transition: color 350ms ease-in;
+            &:hover {
+              color: darken(#338FBE, 30);
+            }
+          }
         }
         .reflect {
           // position: absolute;
@@ -77,4 +88,7 @@
       text-align: center;
     }
   } 
+}
+.playing {
+  opacity: 0;
 }
