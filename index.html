@@ -7,58 +7,57 @@
   <link rel="icon" type="image/x-icon" href="./assets/image/favicon.ico">
   <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
   <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.14/dist/css/uikit.min.css" />
   <link rel="stylesheet" href="./assets/css/prefixed/style.css">
   <!-- <link rel="stylesheet" href="./assets/css/style.css"> -->
   <title>Bonne année</title>
 </head>
-<body>
-  <div class="bckg">
-    <img src="./assets/image/stars-sky.gif" alt="" class="background-img">
-    <div class="super-container">
-      <div class="video-entity-container" id="videoEntityContainer">
-        <div class="video-container" id="videoContainer">
-          <div class="video-player">
-            <video 
-              playsinline
-              preload="auto"
-              id="videoPlayer"
-              poster="./assets/image/carre-noir.png"
-            >
-            <source src="./assets/video/WhatsApp.mp4" type="video/mp4">
-            </video> 
-            <i class="fas fa-play" id="playBtn"></i>
-          </div>
-        </div>
-        <div class="reflect">
-        </div>
-        <div class="entity-container">
-          <a href="https://www.klm.fr/">
-            <img src="./assets/image/AFIKLMEM_LOGO.png" alt="" class="klm">
-          </a>
-        </div>
-      </div>
-      <!-- <div class="social-network">
-        <ul>
-          <li>
-            <a href="https://www.klm.fr/">
-              <i class="fab fa-twitter-square social-icons"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.klm.fr/">
-              <i class="fab fa-facebook-square"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.klm.fr/">
-              <i class="fab fa-twitter-square social-icons"></i>
-            </a>
-          </li>
-        </ul>
-      </div> -->
+<body> 
+  <div class="container">
+    <div class="bck-container">
+      <video id="videoBckg" src="./assets/video/WhatsApp.mp4" playsinline muted autoplay loop></video>
     </div>
+    <div class="container-social-video">
+      <div class="orga">
+        <div class="social-network">
+          <ul>
+            <li>
+              <a href="https://www.klm.fr/">
+                <i class="fab fa-twitter-square social-icons"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.klm.fr/">
+                <i class="fab fa-facebook-square"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.klm.fr/">
+                <i class="fab fa-twitter-square social-icons"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="video-player-container">
+          <div class="video-player">
+            <video src="./assets/video/ALPANGE-LOOP-1920.mp4" controls></video>
+          </div>
+          <div class="reflect">
+          </div>
+        </div> 
+      </div>
+      
+      <div class="entity-container">
+        <a href="https://www.klm.fr/">
+          <img src="./assets/image/AFIKLMEM_LOGO.png" alt="" class="klm">
+        </a>
+      </div>
+    </div>  
   </div>
-  <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
+  </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.14/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.14/dist/js/uikit-icons.min.js"></script>  <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
   <script src="assets/js/index.js" type="text/javascript"></script>
   <script src="https://kit.fontawesome.com/187870b032.js" crossorigin="anonymous"></script>
   <script>

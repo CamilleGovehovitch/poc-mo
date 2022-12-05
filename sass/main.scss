@@ -1,87 +1,80 @@
 * {
   box-sizing: border-box;
 }
-.bckg {
-  height: 100vh;
+.container {
+  position: relative;
+  background-color: brown;
   width: 100vw;
-  img {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-  }
-  .super-container {
-    position: fixed;
-    bottom: 0;
-    height: 100%;
-    width: 100%;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    .video-entity-container {
-      margin-bottom: 30px;
-      .video-container {
-        width: 300px;
-        display: flex;
-        justify-content: center;
-        margin-bottom: 20px;
-        video {
-          border-radius: 20px;
-        }
-        @media (min-width: 768px) {
-          width: 600px;
-        }
-        @media (min-width: 1024px) {
-          width: 640px;
-        }
-      }
-      .entity-container {
-        text-align: center;
-        a {
-          text-decoration: none;
-          color: white;
-          font-size: 25px;
-          transition: color 250ms ease-in-out;
-          &:hover {
-            color: red;
-          }
-        }
-      }
+  height: 100vh;
+  .bck-container {
+    #videoBckg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
-    .social-network {
-      ul {
-        display: flex;
-        li {
-          margin-right: 10px;
-          a {
+  }
+  .container-social-video {
+    position: absolute;
+    width: 100%;
+    top: 25%;
+    .orga {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 373px;
+      .social-network {
+        margin-right: 10px;
+        height: 100%;
+        ul {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          li, a, i {
             text-decoration: none;
             color: white;
-            transition: color 250ms ease-in-out;
+            font-size: 30px;
+            transition: color 350ms ease-in;
+            margin-bottom: 30px;
             &:hover {
-              color: red;
-            }
-            i {
-              font-size: 30px;
-              @media (min-width: 768px) {
-                font-size: 50px;
-              }
+              color: darken(#338FBE, 30);
             }
           }
-          @media (min-width: 768px) {
-            margin-right: 20px;
-            margin-bottom: 70px;
-          }
-        }
-        @media (min-width: 768px) {
-          flex-direction: column;
         }
       }
+      .video-player-container {
+        // width: 750px;
+        display: block;
+
+        .video-player {
+          display: block;
+          width: 750px;
+          border-image: url(https://www.onlygfx.com/wp-content/uploads/2020/01/gold-picture-frame-1-300x220.png) 20;
+          border-style: solid;
+          border-width: 20px;
+          margin-bottom: 40px;
+        }
+        .reflect {
+          // position: absolute;
+          // bottom: 0;
+            border-image: url(https://www.onlygfx.com/wp-content/uploads/2020/01/gold-picture-frame-1-300x220.png) 20;  
+            border-style: solid;
+            border-width: 20px;
+            width: 250px;
+            margin: auto;
+            transform: rotatex(180deg) translatey(15px); 
+            -webkit-mask-image: linear-gradient(transparent 50%, white 90%);
+            @media (min-width: 768px) {
+              width: 750px;
+            }
+          }
+      }
     }
-    @media (min-width: 768px) {
-      flex-direction: row-reverse;
+    .entity-container {
+      text-align: center;
     }
-  }
+  } 
 }

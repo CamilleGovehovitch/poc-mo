@@ -3,23 +3,44 @@
           box-sizing: border-box;
 }
 
-.bckg {
-  height: 100vh;
+.container {
+  position: relative;
+  background-color: brown;
   width: 100vw;
+  height: 100vh;
 }
-.bckg .background-img {
+.container .bck-container #videoBckg {
   position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-}
-.bckg .super-container {
-  position: fixed;
-  bottom: 0;
-  height: 100%;
+  top: 0;
+  left: 0;
   width: 100%;
-  padding: 20px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.container .container-social-video {
+  position: absolute;
+  width: 100%;
+  top: 25%;
+}
+.container .container-social-video .orga {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 373px;
+}
+.container .container-social-video .orga .social-network {
+  margin-right: 10px;
+  height: 100%;
+}
+.container .container-social-video .orga .social-network ul {
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -30,138 +51,32 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
-.bckg .super-container .video-entity-container {
+.container .container-social-video .orga .social-network ul li, .container .container-social-video .orga .social-network ul a, .container .container-social-video .orga .social-network ul i {
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  -webkit-transition: color 350ms ease-in;
+  -o-transition: color 350ms ease-in;
+  transition: color 350ms ease-in;
   margin-bottom: 30px;
 }
-.bckg .super-container .video-entity-container .video-container {
-  width: 300px;
-  height: 300px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 20px;
+.container .container-social-video .orga .social-network ul li:hover, .container .container-social-video .orga .social-network ul a:hover, .container .container-social-video .orga .social-network ul i:hover {
+  color: #133445;
 }
-.bckg .super-container .video-entity-container .video-container .video-player {
+.container .container-social-video .orga .video-player-container {
+  display: block;
+}
+.container .container-social-video .orga .video-player-container .video-player {
+  display: block;
+  width: 750px;
   -o-border-image: url(https://www.onlygfx.com/wp-content/uploads/2020/01/gold-picture-frame-1-300x220.png) 20;
      border-image: url(https://www.onlygfx.com/wp-content/uploads/2020/01/gold-picture-frame-1-300x220.png) 20;
   border-style: solid;
   border-width: 20px;
-  height: 100%;
-  width: 250px;
-  overflow: hidden;
-  background-color: black;
-  position: relative;
+  margin-bottom: 40px;
 }
-.bckg .super-container .video-entity-container .video-container .video-player video {
-  width: 100%;
-  height: 100%;
-}
-.bckg .super-container .video-entity-container .video-container .video-player i {
-  font-size: 50px;
-  z-index: 999;
-  color: #338FBE;
-  position: absolute;
-  top: 45%;
-  left: 45%;
-  -webkit-transition: color 350ms ease-in-out;
-  -o-transition: color 350ms ease-in-out;
-  transition: color 350ms ease-in-out;
-}
-.bckg .super-container .video-entity-container .video-container .video-player i:hover {
-  color: #133445;
-}
-@media (min-width: 768px) {
-  .bckg .super-container .video-entity-container .video-container .video-player {
-    width: 600px;
-  }
-}
-@media (min-width: 1024px) {
-  .bckg .super-container .video-entity-container .video-container .video-player {
-    width: 600px;
-  }
-}
-@media (min-width: 768px) {
-  .bckg .super-container .video-entity-container .video-container {
-    width: 600px;
-  }
-}
-@media (min-width: 1024px) {
-  .bckg .super-container .video-entity-container .video-container {
-    width: 640px;
-  }
-}
-.bckg .super-container .video-entity-container .entity-container {
-  text-align: center;
-}
-.bckg .super-container .video-entity-container .entity-container a {
-  text-decoration: none;
-  color: white;
-}
-.bckg .super-container .video-entity-container .entity-container a .klm {
-  width: 200px;
-}
-@media (min-width: 768px) {
-  .bckg .super-container .video-entity-container .entity-container a .klm {
-    width: 300px;
-  }
-}
-.bckg .super-container .social-network ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.bckg .super-container .social-network ul li {
-  margin-right: 10px;
-}
-.bckg .super-container .social-network ul li a {
-  text-decoration: none;
-  color: white;
-  -webkit-transition: color 250ms ease-in-out;
-  -o-transition: color 250ms ease-in-out;
-  transition: color 250ms ease-in-out;
-}
-.bckg .super-container .social-network ul li a:hover {
-  color: red;
-}
-.bckg .super-container .social-network ul li a i {
-  font-size: 30px;
-}
-@media (min-width: 768px) {
-  .bckg .super-container .social-network ul li a i {
-    font-size: 50px;
-  }
-}
-@media (min-width: 768px) {
-  .bckg .super-container .social-network ul li {
-    margin-right: 20px;
-    margin-bottom: 70px;
-  }
-}
-@media (min-width: 768px) {
-  .bckg .super-container .social-network ul {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
-@media (min-width: 768px) {
-  .bckg .super-container {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
-  }
-}
-
-.reflect {
+.container .container-social-video .orga .video-player-container .reflect {
   -o-border-image: url(https://www.onlygfx.com/wp-content/uploads/2020/01/gold-picture-frame-1-300x220.png) 20;
      border-image: url(https://www.onlygfx.com/wp-content/uploads/2020/01/gold-picture-frame-1-300x220.png) 20;
   border-style: solid;
@@ -175,13 +90,12 @@
   -webkit-mask-image: linear-gradient(transparent 50%, white 90%);
 }
 @media (min-width: 768px) {
-  .reflect {
-    width: 600px;
+  .container .container-social-video .orga .video-player-container .reflect {
+    width: 750px;
   }
 }
-
-.playing {
-  opacity: 0;
+.container .container-social-video .entity-container {
+  text-align: center;
 }
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3Nhc3MvbWFpbi5zY3NzIiwiLi4vc3R5bGUuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsOEJBQUE7VUFBQSxzQkFBQTtBQ0NGOztBRENBO0VBQ0UsYUFBQTtFQUNBLFlBQUE7QUNFRjtBRERFO0VBQ0UsZUFBQTtFQUNBLFFBQUE7RUFDQSxTQUFBO0VBQ0EsZUFBQTtFQUNBLGdCQUFBO0FDR0o7QURERTtFQUNFLGVBQUE7RUFDQSxTQUFBO0VBQ0EsWUFBQTtFQUNBLFdBQUE7RUFDQSxhQUFBO0VBQ0Esb0JBQUE7RUFBQSxvQkFBQTtFQUFBLGFBQUE7RUFDQSw0QkFBQTtFQUFBLDZCQUFBO01BQUEsMEJBQUE7VUFBQSxzQkFBQTtFQUNBLHdCQUFBO01BQUEscUJBQUE7VUFBQSx1QkFBQTtFQUNBLHlCQUFBO01BQUEsc0JBQUE7VUFBQSxtQkFBQTtBQ0dKO0FERkk7RUFDRSxtQkFBQTtBQ0lOO0FESE07RUFDRSxZQUFBO0VBQ0EsYUFBQTtFQUNBLG9CQUFBO0VBQUEsb0JBQUE7RUFBQSxhQUFBO0VBQ0Esd0JBQUE7TUFBQSxxQkFBQTtVQUFBLHVCQUFBO0VBQ0EsbUJBQUE7QUNLUjtBREpRO0VBQ0UsNEdBQUE7S0FBQSx5R0FBQTtFQUNBLG1CQUFBO0VBQ0Esa0JBQUE7RUFDQSxZQUFBO0VBQ0EsWUFBQTtFQUNBLGdCQUFBO0VBQ0EsdUJBQUE7RUFDQSxrQkFBQTtBQ01WO0FETFU7RUFDRSxXQUFBO0VBQ0EsWUFBQTtBQ09aO0FETFU7RUFDRSxlQUFBO0VBQ0EsWUFBQTtFQUNBLGNBQUE7RUFDQSxrQkFBQTtFQUNBLFFBQUE7RUFDQSxTQUFBO0VBQ0EsMkNBQUE7RUFBQSxzQ0FBQTtFQUFBLG1DQUFBO0FDT1o7QUROWTtFQUNFLGNBQUE7QUNRZDtBRExVO0VBekJGO0lBMEJJLFlBQUE7RUNRVjtBQUNGO0FEUFU7RUE1QkY7SUE2QkksWUFBQTtFQ1VWO0FBQ0Y7QURSUTtFQXRDRjtJQXVDSSxZQUFBO0VDV1I7QUFDRjtBRFZRO0VBekNGO0lBMENJLFlBQUE7RUNhUjtBQUNGO0FEWE07RUFDRSxrQkFBQTtBQ2FSO0FEWlE7RUFDRSxxQkFBQTtFQUNBLFlBQUE7QUNjVjtBRGJVO0VBQ0UsWUFBQTtBQ2VaO0FEZFk7RUFGRjtJQUdJLFlBQUE7RUNpQlo7QUFDRjtBRFhNO0VBQ0Usb0JBQUE7RUFBQSxvQkFBQTtFQUFBLGFBQUE7QUNhUjtBRFpRO0VBQ0Usa0JBQUE7QUNjVjtBRGJVO0VBQ0UscUJBQUE7RUFDQSxZQUFBO0VBQ0EsMkNBQUE7RUFBQSxzQ0FBQTtFQUFBLG1DQUFBO0FDZVo7QURkWTtFQUNFLFVBQUE7QUNnQmQ7QURkWTtFQUNFLGVBQUE7QUNnQmQ7QURmYztFQUZGO0lBR0ksZUFBQTtFQ2tCZDtBQUNGO0FEZlU7RUFoQkY7SUFpQkksa0JBQUE7SUFDQSxtQkFBQTtFQ2tCVjtBQUNGO0FEaEJRO0VBdkJGO0lBd0JJLDRCQUFBO0lBQUEsNkJBQUE7UUFBQSwwQkFBQTtZQUFBLHNCQUFBO0VDbUJSO0FBQ0Y7QURoQkk7RUFwR0Y7SUFxR0ksOEJBQUE7SUFBQSw4QkFBQTtRQUFBLCtCQUFBO1lBQUEsMkJBQUE7RUNtQko7QUFDRjs7QURoQkE7RUFDRSw0R0FBQTtLQUFBLHlHQUFBO0VBQ0EsbUJBQUE7RUFDQSxrQkFBQTtFQUNBLFlBQUE7RUFDQSxZQUFBO0VBQ0EsbURBQUE7TUFBQSwrQ0FBQTtVQUFBLDJDQUFBO0VBQ0EseUhBQUE7RUFBQSwrREFBQTtBQ21CRjtBRGxCRTtFQVJGO0lBU0ksWUFBQTtFQ3FCRjtBQUNGOztBRG5CQTtFQUNFLFVBQUE7QUNzQkYiLCJmaWxlIjoic3R5bGUuY3NzIn0= */
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3Nhc3MvbWFpbi5zY3NzIiwiLi4vc3R5bGUuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsOEJBQUE7VUFBQSxzQkFBQTtBQ0NGOztBRENBO0VBQ0Usa0JBQUE7RUFDQSx1QkFBQTtFQUNBLFlBQUE7RUFDQSxhQUFBO0FDRUY7QURBSTtFQUNFLGVBQUE7RUFDQSxNQUFBO0VBQ0EsT0FBQTtFQUNBLFdBQUE7RUFDQSxZQUFBO0VBQ0Esb0JBQUE7S0FBQSxpQkFBQTtBQ0VOO0FEQ0U7RUFDRSxrQkFBQTtFQUNBLFdBQUE7RUFDQSxRQUFBO0FDQ0o7QURBSTtFQUNFLG9CQUFBO0VBQUEsb0JBQUE7RUFBQSxhQUFBO0VBQ0Esd0JBQUE7TUFBQSxxQkFBQTtVQUFBLHVCQUFBO0VBQ0EseUJBQUE7TUFBQSxzQkFBQTtVQUFBLG1CQUFBO0VBQ0EsYUFBQTtBQ0VOO0FERE07RUFDRSxrQkFBQTtFQUNBLFlBQUE7QUNHUjtBREZRO0VBQ0UsWUFBQTtFQUNBLG9CQUFBO0VBQUEsb0JBQUE7RUFBQSxhQUFBO0VBQ0EsNEJBQUE7RUFBQSw2QkFBQTtNQUFBLDBCQUFBO1VBQUEsc0JBQUE7RUFDQSx3QkFBQTtNQUFBLHFCQUFBO1VBQUEsdUJBQUE7QUNJVjtBREhVO0VBQ0UscUJBQUE7RUFDQSxZQUFBO0VBQ0EsZUFBQTtFQUNBLHVDQUFBO0VBQUEsa0NBQUE7RUFBQSwrQkFBQTtFQUNBLG1CQUFBO0FDS1o7QURKWTtFQUNFLGNBQUE7QUNNZDtBRERNO0VBRUUsY0FBQTtBQ0VSO0FEQVE7RUFDRSxjQUFBO0VBQ0EsWUFBQTtFQUNBLDRHQUFBO0tBQUEseUdBQUE7RUFDQSxtQkFBQTtFQUNBLGtCQUFBO0VBQ0EsbUJBQUE7QUNFVjtBREFRO0VBR0ksNEdBQUE7S0FBQSx5R0FBQTtFQUNBLG1CQUFBO0VBQ0Esa0JBQUE7RUFDQSxZQUFBO0VBQ0EsWUFBQTtFQUNBLG1EQUFBO01BQUEsK0NBQUE7VUFBQSwyQ0FBQTtFQUNBLHlIQUFBO0VBQUEsK0RBQUE7QUNBWjtBRENZO0VBVko7SUFXTSxZQUFBO0VDRVo7QUFDRjtBREVJO0VBQ0Usa0JBQUE7QUNBTiIsImZpbGUiOiJzdHlsZS5jc3MifQ== */
