@@ -48,7 +48,12 @@
       .video-player-container {
         // width: 750px;
         display: block;
-
+        transition: color 350ms ease-in;
+        &:hover {
+          #playBtn {
+              color: darken(#338FBE, 30);
+          }
+        }
         .video-player {
           position: relative;
           width: 750px;
@@ -63,9 +68,9 @@
             font-size: 30px;
             color: #338FBE;
             transition: color 350ms ease-in;
-            &:hover {
-              color: darken(#338FBE, 30);
-            }
+            // &:hover {
+            //   color: darken(#338FBE, 30);
+            // }
           }
         }
         .reflect {

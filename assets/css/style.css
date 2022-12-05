@@ -49,6 +49,10 @@
 }
 .container .container-social-video .orga .video-player-container {
   display: block;
+  transition: color 350ms ease-in;
+}
+.container .container-social-video .orga .video-player-container:hover #playBtn {
+  color: #133445;
 }
 .container .container-social-video .orga .video-player-container .video-player {
   position: relative;
@@ -65,9 +69,6 @@
   font-size: 30px;
   color: #338FBE;
   transition: color 350ms ease-in;
-}
-.container .container-social-video .orga .video-player-container .video-player i:hover {
-  color: #133445;
 }
 .container .container-social-video .orga .video-player-container .reflect {
   border-image: url(https://www.onlygfx.com/wp-content/uploads/2020/01/gold-picture-frame-1-300x220.png) 20;
