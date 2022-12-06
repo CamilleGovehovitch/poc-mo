@@ -1,14 +1,13 @@
-// const videoContainer = document.getElementById('videoContainer');
-// window.addEventListener('load', (event) => {
-//   const videoPlay = document.createElement('video');
-//   videoPlay.classList.add('video');
-//   videoContainer.appendChild(videoPlay);
-// });
+
 
 const playBtn = document.getElementById('playBtn');
 const videoPlayer = document.getElementById('videoPlayer');
 const videoContainer = document.getElementById('videoContainer');
-console.log(videoPlayer);
+const videoBckg = document.getElementById('videoBckg');
+window.addEventListener('load', (event) => {
+  console.log('hello');
+  videoBckg.src = './assets/video/WhatsApp.mp4';
+});
 
 videoContainer.addEventListener('click', handlePlayButton, false);
 
