@@ -4,9 +4,11 @@ const playBtn = document.getElementById('playBtn');
 const videoPlayer = document.getElementById('videoPlayer');
 const videoContainer = document.getElementById('videoContainer');
 const videoBckg = document.getElementById('videoBckg');
+
 window.addEventListener('load', (event) => {
   console.log('hello');
   videoBckg.src = './assets/video/WhatsApp.mp4';
+  videoPlayer.src = './assets/video/ALPANGE-LOOP-1920.mp4';
 });
 
 videoContainer.addEventListener('click', handlePlayButton, false);
