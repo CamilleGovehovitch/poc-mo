@@ -19,21 +19,30 @@
   .container-social-video {
     position: absolute;
     width: 100%;
-    top: 25%;
+    bottom: 0;
     .orga {
       display: flex;
       justify-content: center;
       align-items: center;
-      flex-direction: column-reverse;
+      flex-direction: column;
       height: 373px;
       .social-network {
-        margin-right: 10px;
+        margin-right: auto;
+        margin-left: auto;
         height: 100%;
         width: 100%;
+        @media screen and (min-width: 768px) {
+          width: 70%;
+        }
+        @media screen and (min-width: 1440px) {
+          width: 40%;
+        }
         ul {
           height: 100%;
           width: 100%;
           display: flex;
+          align-items: flex-end;
+          padding: 0;
           // flex-direction: column;
           justify-content: space-around;
           li, a, i {
@@ -44,6 +53,9 @@
             margin-bottom: 30px;
             &:hover {
               color: darken(#338FBE, 30);
+            }
+            @media screen and (min-width: 1024px) {
+              font-size: 50px;
             }
           }
         }
@@ -97,6 +109,16 @@
     }
     .entity-container {
       text-align: center;
+      width: 100%;
+      a, img {
+        width: 80%;
+        @media screen and (min-width: 768px) {
+          width: 50%;
+        }
+        @media screen and (min-width: 1440px) {
+          width: 30%;
+        }
+      }
     }
   } 
 }

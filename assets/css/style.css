@@ -18,24 +18,37 @@
 .container .container-social-video {
   position: absolute;
   width: 100%;
-  top: 25%;
+  bottom: 0;
 }
 .container .container-social-video .orga {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column-reverse;
+  flex-direction: column;
   height: 373px;
 }
 .container .container-social-video .orga .social-network {
-  margin-right: 10px;
+  margin-right: auto;
+  margin-left: auto;
   height: 100%;
   width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .container .container-social-video .orga .social-network {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .container .container-social-video .orga .social-network {
+    width: 40%;
+  }
 }
 .container .container-social-video .orga .social-network ul {
   height: 100%;
   width: 100%;
   display: flex;
+  align-items: flex-end;
+  padding: 0;
   justify-content: space-around;
 }
 .container .container-social-video .orga .social-network ul li, .container .container-social-video .orga .social-network ul a, .container .container-social-video .orga .social-network ul i {
@@ -47,6 +60,11 @@
 }
 .container .container-social-video .orga .social-network ul li:hover, .container .container-social-video .orga .social-network ul a:hover, .container .container-social-video .orga .social-network ul i:hover {
   color: #133445;
+}
+@media screen and (min-width: 1024px) {
+  .container .container-social-video .orga .social-network ul li, .container .container-social-video .orga .social-network ul a, .container .container-social-video .orga .social-network ul i {
+    font-size: 50px;
+  }
 }
 .container .container-social-video .orga .video-player-container {
   display: block;
@@ -92,6 +110,20 @@
 }
 .container .container-social-video .entity-container {
   text-align: center;
+  width: 100%;
+}
+.container .container-social-video .entity-container a, .container .container-social-video .entity-container img {
+  width: 80%;
+}
+@media screen and (min-width: 768px) {
+  .container .container-social-video .entity-container a, .container .container-social-video .entity-container img {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .container .container-social-video .entity-container a, .container .container-social-video .entity-container img {
+    width: 30%;
+  }
 }
 
 .playing {

@@ -1,5 +1,4 @@
 
-
 const playBtn = document.getElementById('playBtn');
 const videoPlayer = document.getElementById('videoPlayer');
 const videoContainer = document.getElementById('videoContainer');
@@ -11,22 +10,22 @@ window.addEventListener('load', (event) => {
   videoPlayer.src = './assets/video/ALPANGE-LOOP-1920.mp4';
 });
 
-videoContainer.addEventListener('click', handlePlayButton, false);
+// videoContainer.addEventListener('click', handlePlayButton, false);
 
-async function playVideo() {
-  try {
-    await videoPlayer.play();
-    playBtn.classList.add("playing");
-  } catch (err) {
-    playBtn.classList.remove("playing");
-  }
-}
+// async function playVideo() {
+//   try {
+//     await videoPlayer.play();
+//     playBtn.classList.add("playing");
+//   } catch (err) {
+//     playBtn.classList.remove("playing");
+//   }
+// }
 
-function handlePlayButton() {
-  if (videoPlayer.paused) {
-    playVideo();
-  } else {
-    videoPlayer.pause();
-    playBtn.classList.remove("playing");
-  }
-}
+// function handlePlayButton() {
+//   if (videoPlayer.paused) {
+//     playVideo();
+//   } else {
+//     videoPlayer.pause();
+//     playBtn.classList.remove("playing");
+//   }
+// }
