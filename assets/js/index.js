@@ -9,7 +9,10 @@ window.addEventListener('load', (event) => {
   console.log('hello');
   videoBckg.src = './assets/video/WhatsApp.mp4';
   if (browserName === 'firefox') {
-    videoBckg.style.width = '300vw';
+    console.log('hey');
+    videoBckg.style.width = '100% !important';
+  } else {
+    console.log('ho');
   }
   // videoBckg.style.width = '100%';
   // videoBckg.style.height = '100%';
