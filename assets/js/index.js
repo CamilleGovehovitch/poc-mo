@@ -7,7 +7,7 @@ const videoBckg = document.getElementById('videoBckg');
 window.addEventListener('load', (event) => {
   console.log('hello');
   videoBckg.src = './assets/video/WhatsApp.mp4';
-  videoBckg.style.width = '100%';
+  // videoBckg.style.width = '100%';
   // videoPlayer.src = './assets/video/ALPANGE-LOOP-1920.mp4';
 });
 
