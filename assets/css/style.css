@@ -1,13 +1,3 @@
-.container .bck-container {
-  width: 100%;
-}
-.container .bck-container #videoBckg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+
 
 /*# sourceMappingURL=style.css.map */
