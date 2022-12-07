@@ -7,11 +7,10 @@ const videoBckg = document.getElementById('videoBckg');
 window.addEventListener('load', (event) => {
   console.log('hello');
   videoBckg.src = './assets/video/WhatsApp.mp4';
-  videoBckg.style.width = '100%';
-  videoBckg.style.height = '100%';
-  videoBckg.style.objectFit = 'cover';
-  videoBckg.style.position = 'fixed';
-  videoBckg.style.margin = '10px 0 0 100px';
+  // videoBckg.style.width = '100%';
+  // videoBckg.style.height = '100%';
+  // videoBckg.style.objectFit = 'cover';
+  // videoBckg.style.position = 'fixed';
   // videoPlayer.src = './assets/video/ALPANGE-LOOP-1920.mp4';
 });
 
