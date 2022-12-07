@@ -11,6 +11,7 @@ window.addEventListener('load', (event) => {
   videoBckg.style.height = '100%';
   videoBckg.style.objectFit = 'cover';
   videoBckg.style.position = 'fixed';
+  videoBckg.style.margin = '10px 0 0 100px';
   // videoPlayer.src = './assets/video/ALPANGE-LOOP-1920.mp4';
 });
 
