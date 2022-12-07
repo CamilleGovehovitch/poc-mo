@@ -20,7 +20,7 @@
 .container .container-social-video {
   position: absolute;
   width: 100%;
-  top: 25%;
+  bottom: 0;
 }
 .container .container-social-video .orga {
   display: -webkit-box;
@@ -33,15 +33,26 @@
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 373px;
 }
 .container .container-social-video .orga .social-network {
-  margin-right: 10px;
+  margin-right: auto;
+  margin-left: auto;
   height: 100%;
   width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .container .container-social-video .orga .social-network {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .container .container-social-video .orga .social-network {
+    width: 40%;
+  }
 }
 .container .container-social-video .orga .social-network ul {
   height: 100%;
@@ -49,6 +60,10 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 0;
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
@@ -63,6 +78,11 @@
 }
 .container .container-social-video .orga .social-network ul li:hover, .container .container-social-video .orga .social-network ul a:hover, .container .container-social-video .orga .social-network ul i:hover {
   color: #133445;
+}
+@media screen and (min-width: 1024px) {
+  .container .container-social-video .orga .social-network ul li, .container .container-social-video .orga .social-network ul a, .container .container-social-video .orga .social-network ul i {
+    font-size: 50px;
+  }
 }
 .container .container-social-video .orga .video-player-container {
   display: block;
@@ -117,10 +137,24 @@
 }
 .container .container-social-video .entity-container {
   text-align: center;
+  width: 100%;
+}
+.container .container-social-video .entity-container a, .container .container-social-video .entity-container img {
+  width: 80%;
+}
+@media screen and (min-width: 768px) {
+  .container .container-social-video .entity-container a, .container .container-social-video .entity-container img {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .container .container-social-video .entity-container a, .container .container-social-video .entity-container img {
+    width: 30%;
+  }
 }
 
 .playing {
   opacity: 0;
 }
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3Nhc3MvbWFpbi5zY3NzIiwiLi4vc3R5bGUuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsOEJBQUE7VUFBQSxzQkFBQTtBQ0NGOztBRENBO0VBQ0Usa0JBQUE7RUFFQSxZQUFBO0VBQ0EsYUFBQTtBQ0NGO0FEQ0k7RUFDRSxlQUFBO0VBQ0EsTUFBQTtFQUNBLE9BQUE7RUFDQSxXQUFBO0VBQ0EsWUFBQTtFQUNBLG9CQUFBO0tBQUEsaUJBQUE7QUNDTjtBREVFO0VBQ0Usa0JBQUE7RUFDQSxXQUFBO0VBQ0EsUUFBQTtBQ0FKO0FEQ0k7RUFDRSxvQkFBQTtFQUFBLG9CQUFBO0VBQUEsYUFBQTtFQUNBLHdCQUFBO01BQUEscUJBQUE7VUFBQSx1QkFBQTtFQUNBLHlCQUFBO01BQUEsc0JBQUE7VUFBQSxtQkFBQTtFQUNBLDRCQUFBO0VBQUEsOEJBQUE7TUFBQSxrQ0FBQTtVQUFBLDhCQUFBO0VBQ0EsYUFBQTtBQ0NOO0FEQU07RUFDRSxrQkFBQTtFQUNBLFlBQUE7RUFDQSxXQUFBO0FDRVI7QUREUTtFQUNFLFlBQUE7RUFDQSxXQUFBO0VBQ0Esb0JBQUE7RUFBQSxvQkFBQTtFQUFBLGFBQUE7RUFFQSx5QkFBQTtNQUFBLDZCQUFBO0FDRVY7QUREVTtFQUNFLHFCQUFBO0VBQ0EsWUFBQTtFQUNBLGVBQUE7RUFDQSx1Q0FBQTtFQUFBLGtDQUFBO0VBQUEsK0JBQUE7RUFDQSxtQkFBQTtBQ0daO0FERlk7RUFDRSxjQUFBO0FDSWQ7QURDTTtFQUVFLGNBQUE7RUFDQSx1Q0FBQTtFQUFBLGtDQUFBO0VBQUEsK0JBQUE7QUNBUjtBREVVO0VBQ0ksY0FBQTtBQ0FkO0FER1E7RUFDRSxrQkFBQTtFQUNBLFdBQUE7RUFDQSw0R0FBQTtLQUFBLHlHQUFBO0VBQ0EsbUJBQUE7RUFDQSxrQkFBQTtFQUNBLG1CQUFBO0FDRFY7QURFVTtFQVBGO0lBUUksWUFBQTtFQ0NWO0FBQ0Y7QURBVTtFQUNFLGtCQUFBO0VBQ0EsUUFBQTtFQUNBLFNBQUE7RUFDQSxlQUFBO0VBQ0EsY0FBQTtFQUNBLHVDQUFBO0VBQUEsa0NBQUE7RUFBQSwrQkFBQTtBQ0VaO0FESVE7RUFHSSw0R0FBQTtLQUFBLHlHQUFBO0VBQ0EsbUJBQUE7RUFDQSxrQkFBQTtFQUNBLFdBQUE7RUFDQSxZQUFBO0VBQ0EsbURBQUE7TUFBQSwrQ0FBQTtVQUFBLDJDQUFBO0VBQ0EseUhBQUE7RUFBQSwrREFBQTtBQ0paO0FES1k7RUFWSjtJQVdNLFlBQUE7RUNGWjtBQUNGO0FETUk7RUFDRSxrQkFBQTtBQ0pOOztBRFFBO0VBQ0UsVUFBQTtBQ0xGIiwiZmlsZSI6InN0eWxlLmNzcyJ9 */
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3Nhc3MvbWFpbi5zY3NzIiwiLi4vc3R5bGUuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsOEJBQUE7VUFBQSxzQkFBQTtBQ0NGOztBRENBO0VBQ0Usa0JBQUE7RUFFQSxZQUFBO0VBQ0EsYUFBQTtBQ0NGO0FEQ0k7RUFDRSxlQUFBO0VBQ0EsTUFBQTtFQUNBLE9BQUE7RUFDQSxXQUFBO0VBQ0EsWUFBQTtFQUNBLG9CQUFBO0tBQUEsaUJBQUE7QUNDTjtBREVFO0VBQ0Usa0JBQUE7RUFDQSxXQUFBO0VBQ0EsU0FBQTtBQ0FKO0FEQ0k7RUFDRSxvQkFBQTtFQUFBLG9CQUFBO0VBQUEsYUFBQTtFQUNBLHdCQUFBO01BQUEscUJBQUE7VUFBQSx1QkFBQTtFQUNBLHlCQUFBO01BQUEsc0JBQUE7VUFBQSxtQkFBQTtFQUNBLDRCQUFBO0VBQUEsNkJBQUE7TUFBQSwwQkFBQTtVQUFBLHNCQUFBO0VBQ0EsYUFBQTtBQ0NOO0FEQU07RUFDRSxrQkFBQTtFQUNBLGlCQUFBO0VBQ0EsWUFBQTtFQUNBLFdBQUE7QUNFUjtBRERRO0VBTEY7SUFNSSxVQUFBO0VDSVI7QUFDRjtBREhRO0VBUkY7SUFTSSxVQUFBO0VDTVI7QUFDRjtBRExRO0VBQ0UsWUFBQTtFQUNBLFdBQUE7RUFDQSxvQkFBQTtFQUFBLG9CQUFBO0VBQUEsYUFBQTtFQUNBLHNCQUFBO01BQUEsbUJBQUE7VUFBQSxxQkFBQTtFQUNBLFVBQUE7RUFFQSx5QkFBQTtNQUFBLDZCQUFBO0FDTVY7QURMVTtFQUNFLHFCQUFBO0VBQ0EsWUFBQTtFQUNBLGVBQUE7RUFDQSx1Q0FBQTtFQUFBLGtDQUFBO0VBQUEsK0JBQUE7RUFDQSxtQkFBQTtBQ09aO0FETlk7RUFDRSxjQUFBO0FDUWQ7QUROWTtFQVRGO0lBVUksZUFBQTtFQ1NaO0FBQ0Y7QURMTTtFQUVFLGNBQUE7RUFDQSx1Q0FBQTtFQUFBLGtDQUFBO0VBQUEsK0JBQUE7QUNNUjtBREpVO0VBQ0ksY0FBQTtBQ01kO0FESFE7RUFDRSxrQkFBQTtFQUNBLFdBQUE7RUFDQSw0R0FBQTtLQUFBLHlHQUFBO0VBQ0EsbUJBQUE7RUFDQSxrQkFBQTtFQUNBLG1CQUFBO0FDS1Y7QURKVTtFQVBGO0lBUUksWUFBQTtFQ09WO0FBQ0Y7QUROVTtFQUNFLGtCQUFBO0VBQ0EsUUFBQTtFQUNBLFNBQUE7RUFDQSxlQUFBO0VBQ0EsY0FBQTtFQUNBLHVDQUFBO0VBQUEsa0NBQUE7RUFBQSwrQkFBQTtBQ1FaO0FERlE7RUFHSSw0R0FBQTtLQUFBLHlHQUFBO0VBQ0EsbUJBQUE7RUFDQSxrQkFBQTtFQUNBLFdBQUE7RUFDQSxZQUFBO0VBQ0EsbURBQUE7TUFBQSwrQ0FBQTtVQUFBLDJDQUFBO0VBQ0EseUhBQUE7RUFBQSwrREFBQTtBQ0VaO0FERFk7RUFWSjtJQVdNLFlBQUE7RUNJWjtBQUNGO0FEQUk7RUFDRSxrQkFBQTtFQUNBLFdBQUE7QUNFTjtBRERNO0VBQ0UsVUFBQTtBQ0dSO0FERlE7RUFGRjtJQUdJLFVBQUE7RUNLUjtBQUNGO0FESlE7RUFMRjtJQU1JLFVBQUE7RUNPUjtBQUNGOztBREZBO0VBQ0UsVUFBQTtBQ0tGIiwiZmlsZSI6InN0eWxlLmNzcyJ9 */
