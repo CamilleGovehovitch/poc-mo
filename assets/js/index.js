@@ -7,7 +7,8 @@ const videoBckg = document.getElementById('videoBckg');
 window.addEventListener('load', (event) => {
   let browserName =   fnBrowserDetect();
   console.log('hello');
-  videoBckg.src = './assets/video/WhatsApp.mp4';
+  // videoBckg.src = './assets/video/WhatsApp.mp4';
+  videoBckg.src = './assets/video/ALPANGE-LOOP-1920.mp4';
   if (browserName === 'firefox') {
     console.log('hey');
     videoBckg.style.width = '100% !important';
@@ -18,7 +19,6 @@ window.addEventListener('load', (event) => {
   // videoBckg.style.height = '100%';
   // videoBckg.style.objectFit = 'cover';
   // videoBckg.style.position = 'fixed';
-  // videoPlayer.src = './assets/video/ALPANGE-LOOP-1920.mp4';
 });
 
 function fnBrowserDetect(){
