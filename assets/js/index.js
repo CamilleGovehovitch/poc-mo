@@ -2,7 +2,7 @@ const playBtn = document.getElementById('playBtn');
 const videoPlayer = document.getElementById('videoPlayer');
 const videoContainer = document.getElementById('videoContainer');
 const videoBckg = document.getElementById('videoBckg');
-
+const bckContainer = document.getElementById('bckContainer');
 const mobileWidth = 426;
 
 window.addEventListener('load', (event) => {
@@ -13,15 +13,20 @@ window.addEventListener('load', (event) => {
   // videoBckg.src = './assets/video/carte-seasons-greetings-happy-new-year2.mp4';
   // enterFullScreen(videoBckg);
   if (window.innerWidth < mobileWidth && screen.orientation.type === 'portrait-primary') {
-    screen.orientation.type = 'landscape-primary';
-    screen.orientation.lock('landscape-primary');
+    // screen.orientation.type = 'landscape-primary';
     console.log(screen.orientation.lock);
   } else {
     console.log(screen.orientation.lock);
   }
-  videoBckg.play();
+  videoBckg.play(videoBckg);
 });
-// window.onload = setTimeout(waitLoad, 2);
+
+bckContainer.addEventListener('click', (event) => {
+  enterFullScreen(videoBckg);
+})
+bckContainer.addEventListener('touchtart', (event) => {
+  enterFullScreen(videoBckg);
+})
 
 function fnBrowserDetect(){
                  
@@ -56,8 +61,6 @@ function enterFullScreen(element) {
   }
 };
 
-
-
 document.addEventListener('fullscreenchange', (event) => {
   if (document.fullscreenElement) {
     console.log('Entered fullscreen:', document.fullscreenElement);
@@ -65,8 +68,3 @@ document.addEventListener('fullscreenchange', (event) => {
     console.log('Exited fullscreen.');
   }
 });
-
-function waitLoad() {
-  // enterFullScreen(videoBckg);
-  console.log('this page is loaded');
-}
