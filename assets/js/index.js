@@ -1,25 +1,27 @@
-
 const playBtn = document.getElementById('playBtn');
 const videoPlayer = document.getElementById('videoPlayer');
 const videoContainer = document.getElementById('videoContainer');
 const videoBckg = document.getElementById('videoBckg');
+
+const mobileWidth = 426;
 
 window.addEventListener('load', (event) => {
   let browserName =   fnBrowserDetect();
   console.log('hello');
   // videoBckg.src = './assets/video/WhatsApp.mp4';
   videoBckg.src = './assets/video/carte-seasons-greetings-happy-new-year.mp4';
-  if (browserName === 'firefox') {
-    console.log('hey');
-    videoBckg.style.width = '100% !important';
+  // videoBckg.src = './assets/video/carte-seasons-greetings-happy-new-year2.mp4';
+  // enterFullScreen(videoBckg);
+  if (window.innerWidth < mobileWidth && screen.orientation.type === 'portrait-primary') {
+    screen.orientation.type = 'landscape-primary';
+    screen.orientation.lock('landscape-primary');
+    console.log(screen.orientation.lock);
   } else {
-    console.log('ho');
+    console.log(screen.orientation.lock);
   }
-  // videoBckg.style.width = '100%';
-  // videoBckg.style.height = '100%';
-  // videoBckg.style.objectFit = 'cover';
-  // videoBckg.style.position = 'fixed';
+  videoBckg.play();
 });
+// window.onload = setTimeout(waitLoad, 2);
 
 function fnBrowserDetect(){
                  
@@ -42,35 +44,29 @@ function fnBrowserDetect(){
     return browserName;
 }
 
+function enterFullScreen(element) {
+  if(element.requestFullscreen) {
+    element.requestFullscreen();
+  }else if (element.mozRequestFullScreen) {
+    element.mozRequestFullScreen();     // Firefox
+  }else if (element.webkitRequestFullscreen) {
+    element.webkitRequestFullscreen();  // Safari
+  }else if(element.msRequestFullscreen) {
+    element.msRequestFullscreen();      // IE/Edge
+  }
+};
 
 
 
+document.addEventListener('fullscreenchange', (event) => {
+  if (document.fullscreenElement) {
+    console.log('Entered fullscreen:', document.fullscreenElement);
+  } else {
+    console.log('Exited fullscreen.');
+  }
+});
 
-
-
-
-
-
-
-
-
-
-// videoContainer.addEventListener('click', handlePlayButton, false);
-
-// async function playVideo() {
-//   try {
-//     await videoPlayer.play();
-//     playBtn.classList.add("playing");
-//   } catch (err) {
-//     playBtn.classList.remove("playing");
-//   }
-// }
-
-// function handlePlayButton() {
-//   if (videoPlayer.paused) {
-//     playVideo();
-//   } else {
-//     videoPlayer.pause();
-//     playBtn.classList.remove("playing");
-//   }
-// }
+function waitLoad() {
+  // enterFullScreen(videoBckg);
+  console.log('this page is loaded');
+}
