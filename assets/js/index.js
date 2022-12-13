@@ -8,7 +8,7 @@ window.addEventListener('load', (event) => {
   let browserName =   fnBrowserDetect();
   console.log('hello');
   // videoBckg.src = './assets/video/WhatsApp.mp4';
-  videoBckg.src = './assets/video/ALPANGE-LOOP-1920.mp4';
+  videoBckg.src = './assets/video/carte-seasons-greetings-happy-new-year.mp4';
   if (browserName === 'firefox') {
     console.log('hey');
     videoBckg.style.width = '100% !important';
