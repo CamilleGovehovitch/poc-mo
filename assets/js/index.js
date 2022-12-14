@@ -16,32 +16,23 @@ window.addEventListener('load', (event) => {
   }
 });
 
-bckContainer.addEventListener('click', (event) => {
-  // playBtn.classList.remove('playing');
-  // videoBckg.muted = false;
-})
-
-bckContainer.addEventListener('touchtart', (event) => {
-  // playBtn.classList.remove('playing');
-  // enableMute();
-})
-
 fullScreenBtn.addEventListener("click", (event) => {
   handlePlayButton();
   enterFullScreen(videoBckg);
-
+  disableMute();
 }, false);
 
-// playBtn.addEventListener("touchtart", (event) => {
-//   handlePlayButton();
-//   enterFullScreen(videoBckg);
-//   // disableMute();
+fullScreenBtn.addEventListener("touchtart", (event) => {
+  handlePlayButton();
+  enterFullScreen(videoBckg);
+  disableMute();
 
-// }, false);
+}, false);
 
 function enterFullScreen(element) {
   if(element.requestFullscreen) {
     element.requestFullscreen();
+    disableMute();
   }else if (element.mozRequestFullScreen) {
     element.mozRequestFullScreen();     // Firefox
   }else if (element.webkitRequestFullscreen) {
@@ -57,6 +48,7 @@ async function playVideo() {
     await videoBckg.play();
     fullScreenBtn.classList.add("playing");
     videoBckg.play();
+    disableMute();
   } catch (err) {
     fullScreenBtn.classList.remove("playing");
   }
@@ -66,9 +58,7 @@ function handlePlayButton() {
   if (videoBckg.paused) {
     playVideo();
   } else {
-    // videoBckg.pause();
     videoBckg.play();
-
     fullScreenBtn.classList.add("playing");
     fullScreenBtn.classList.remove("playing");
 
