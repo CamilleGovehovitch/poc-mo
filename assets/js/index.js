@@ -17,12 +17,12 @@ window.addEventListener('load', (event) => {
 
 bckContainer.addEventListener('click', (event) => {
   playBtn.classList.remove('playing');
-  videoBckg.muted = false;
+  // videoBckg.muted = false;
 })
 
 bckContainer.addEventListener('touchtart', (event) => {
   playBtn.classList.remove('playing');
-  enableMute();
+  // enableMute();
 })
 
 playBtn.addEventListener("click", (event) => {
@@ -34,6 +34,7 @@ playBtn.addEventListener("click", (event) => {
 playBtn.addEventListener("touchtart", (event) => {
   handlePlayButton();
   enterFullScreen(videoBckg);
+  // disableMute();
 
 }, false);
 
