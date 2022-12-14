@@ -25,29 +25,29 @@
 .container .container-social-video {
   position: absolute;
   width: 100%;
+  height: 130px;
   bottom: 0;
 }
 .container .container-social-video .orga {
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 373px;
+  align-items: baseline;
+  flex-direction: row-reverse;
 }
 .container .container-social-video .orga .social-network {
   margin-right: auto;
   margin-left: auto;
   height: 100%;
-  width: 100%;
+  width: 33%;
 }
 @media screen and (min-width: 768px) {
   .container .container-social-video .orga .social-network {
-    width: 70%;
+    width: 33%;
   }
 }
 @media screen and (min-width: 1440px) {
   .container .container-social-video .orga .social-network {
-    width: 40%;
+    width: 33%;
   }
 }
 .container .container-social-video .orga .social-network ul {
@@ -56,68 +56,23 @@
   display: flex;
   align-items: flex-end;
   padding: 0;
-  justify-content: space-around;
+  justify-content: flex-start;
 }
-.container .container-social-video .orga .social-network ul li, .container .container-social-video .orga .social-network ul a, .container .container-social-video .orga .social-network ul i {
+.container .container-social-video .orga .social-network ul li, .container .container-social-video .orga .social-network ul a, .container .container-social-video .orga .social-network ul img {
   text-decoration: none;
   color: white;
   font-size: 30px;
-  transition: color 350ms ease-in;
-  margin-bottom: 30px;
-}
-.container .container-social-video .orga .social-network ul li:hover, .container .container-social-video .orga .social-network ul a:hover, .container .container-social-video .orga .social-network ul i:hover {
-  color: #133445;
+  width: 30px;
+  margin-right: 3px;
 }
 @media screen and (min-width: 1024px) {
-  .container .container-social-video .orga .social-network ul li, .container .container-social-video .orga .social-network ul a, .container .container-social-video .orga .social-network ul i {
+  .container .container-social-video .orga .social-network ul li, .container .container-social-video .orga .social-network ul a, .container .container-social-video .orga .social-network ul img {
     font-size: 50px;
-  }
-}
-.container .container-social-video .orga .video-player-container {
-  display: block;
-  transition: color 350ms ease-in;
-}
-.container .container-social-video .orga .video-player-container:hover #playBtn {
-  color: #133445;
-}
-.container .container-social-video .orga .video-player-container .video-player {
-  position: relative;
-  width: 100%;
-  border-image: url(https://www.onlygfx.com/wp-content/uploads/2020/01/gold-picture-frame-1-300x220.png) 20;
-  border-style: solid;
-  border-width: 20px;
-  margin-bottom: 40px;
-}
-@media screen and (min-width: 768px) {
-  .container .container-social-video .orga .video-player-container .video-player {
-    width: 750px;
-  }
-}
-.container .container-social-video .orga .video-player-container .video-player i {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  font-size: 30px;
-  color: #338FBE;
-  transition: color 350ms ease-in;
-}
-.container .container-social-video .orga .video-player-container .reflect {
-  border-image: url(https://www.onlygfx.com/wp-content/uploads/2020/01/gold-picture-frame-1-300x220.png) 20;
-  border-style: solid;
-  border-width: 20px;
-  width: 100%;
-  margin: auto;
-  transform: rotatex(180deg) translatey(15px);
-  -webkit-mask-image: linear-gradient(transparent 50%, white 90%);
-}
-@media (min-width: 768px) {
-  .container .container-social-video .orga .video-player-container .reflect {
-    width: 750px;
   }
 }
 .container .container-social-video .entity-container {
   text-align: center;
-  width: 100%;
+  width: 33%;
 }
 .container .container-social-video .entity-container a, .container .container-social-video .entity-container img {
   width: 80%;
@@ -131,6 +86,10 @@
   .container .container-social-video .entity-container a, .container .container-social-video .entity-container img {
     width: 30%;
   }
+}
+.container .container-social-video .test {
+  width: 33%;
+  height: 100%;
 }
 
 .playing {

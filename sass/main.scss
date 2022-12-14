@@ -36,23 +36,24 @@
   .container-social-video {
     position: absolute;
     width: 100%;
+    height: 130px;
     bottom: 0;
     .orga {
       display: flex;
       justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      height: 373px;
+      align-items: baseline;
+      flex-direction: row-reverse;
+      // height: 373px;
       .social-network {
         margin-right: auto;
         margin-left: auto;
         height: 100%;
-        width: 100%;
+        width: 33%;
         @media screen and (min-width: 768px) {
-          width: 70%;
+          width: 33%;
         }
         @media screen and (min-width: 1440px) {
-          width: 40%;
+          width: 33%;
         }
         ul {
           height: 100%;
@@ -61,72 +62,24 @@
           align-items: flex-end;
           padding: 0;
           // flex-direction: column;
-          justify-content: space-around;
-          li, a, i {
+          justify-content: flex-start;
+          li, a, img {
             text-decoration: none;
             color: white;
             font-size: 30px;
-            transition: color 350ms ease-in;
-            margin-bottom: 30px;
-            &:hover {
-              color: darken(#338FBE, 30);
-            }
+            width: 30px;
+            margin-right: 3px;
+            
             @media screen and (min-width: 1024px) {
               font-size: 50px;
             }
           }
         }
       }
-      .video-player-container {
-        // width: 750px;
-        display: block;
-        transition: color 350ms ease-in;
-        &:hover {
-          #playBtn {
-              color: darken(#338FBE, 30);
-          }
-        }
-        .video-player {
-          position: relative;
-          width: 100%;
-          border-image: url(https://www.onlygfx.com/wp-content/uploads/2020/01/gold-picture-frame-1-300x220.png) 20;
-          border-style: solid;
-          border-width: 20px;
-          margin-bottom: 40px;
-          @media screen and (min-width: 768px) {
-            width: 750px;
-          }
-          i {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            font-size: 30px;
-            color: #338FBE;
-            transition: color 350ms ease-in;
-            // &:hover {
-            //   color: lighten(#338FBE, 30);
-            // }
-          }
-        }
-        .reflect {
-          // position: absolute;
-          // bottom: 0;
-            border-image: url(https://www.onlygfx.com/wp-content/uploads/2020/01/gold-picture-frame-1-300x220.png) 20;  
-            border-style: solid;
-            border-width: 20px;
-            width: 100%;
-            margin: auto;
-            transform: rotatex(180deg) translatey(15px); 
-            -webkit-mask-image: linear-gradient(transparent 50%, white 90%);
-            @media (min-width: 768px) {
-              width: 750px;
-            }
-          }
-      }
     }
     .entity-container {
       text-align: center;
-      width: 100%;
+      width: 33%;
       a, img {
         width: 80%;
         @media screen and (min-width: 768px) {
@@ -137,6 +90,10 @@
         }
       }
     }
+    .test {
+      width: 33%;
+      height: 100%;
+    } 
   } 
 }
 .playing {
