@@ -5,6 +5,9 @@ const videoBckg = document.getElementById('videoBckg');
 const bckContainer = document.getElementById('bckContainer');
 const mobileWidth = 426;
 const fullScreenBtn = document.getElementById('fullScreenBtn');
+let myScreenOrientation = window.screen.orientation;
+
+
 // var playPromise = videoBckg.play();
 let browserName;
  
@@ -20,18 +23,21 @@ fullScreenBtn.addEventListener("click", (event) => {
   handlePlayButton();
   enterFullScreen(videoBckg);
   // disableMute();
+  
 }, false);
 
 fullScreenBtn.addEventListener("touchtart", (event) => {
   enterFullScreen(videoBckg);
+  browserName = fnBrowserDetect();
   screen.orientation.unlock();
-  screen.orientation.lock("landscape-primary")
+  myScreenOrientation.lock("landscape-primary")
 		.then(function() {
       handlePlayButton();
 		})
 		.catch(function(error) {
 			alert(error);
 		});
+  
 }, false);
 
 function enterFullScreen(element) {
@@ -46,7 +52,6 @@ function enterFullScreen(element) {
     element.msRequestFullscreen();      // IE/Edge
   }
 };
-
 
 async function playVideo() {
   try {
