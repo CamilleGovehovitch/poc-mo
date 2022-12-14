@@ -12,8 +12,8 @@
 }
 .container .bck-container i {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 10%;
+  right: 10%;
   font-size: 50px;
   color: white;
   transition: color 350ms ease-in;
