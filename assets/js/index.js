@@ -17,21 +17,14 @@ window.addEventListener('load', (event) => {
 });
 
 fullScreenBtn.addEventListener("click", (event) => {
-  // handlePlayButton();
+  handlePlayButton();
   enterFullScreen(videoBckg);
-  screen.orientation.lock("landscape-primary")
-		.then(function() {
-      handlePlayButton();
-		})
-		.catch(function(error) {
-			alert(error);
-		});
   // disableMute();
 }, false);
 
 fullScreenBtn.addEventListener("touchtart", (event) => {
-
   enterFullScreen(videoBckg);
+  screen.orientation.unlock();
   screen.orientation.lock("landscape-primary")
 		.then(function() {
       handlePlayButton();
@@ -39,8 +32,6 @@ fullScreenBtn.addEventListener("touchtart", (event) => {
 		.catch(function(error) {
 			alert(error);
 		});
-  // disableMute();
-
 }, false);
 
 function enterFullScreen(element) {
