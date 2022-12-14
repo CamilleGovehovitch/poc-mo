@@ -11,17 +11,34 @@ let browserName;
 
 window.addEventListener('load', (event) => {
   videoBckg.src = './assets/video/airfrance-klm1.m4v';
+  var current_mode = screen.orientation;
+  console.log(current_mode.type)
+  console.log(current_mode.angle)
 });
 
 fullScreenBtn.addEventListener("click", (event) => {
-  handlePlayButton();
+  // handlePlayButton();
   enterFullScreen(videoBckg);
+  screen.orientation.lock("landscape-primary")
+		.then(function() {
+      handlePlayButton();
+		})
+		.catch(function(error) {
+			alert(error);
+		});
   // disableMute();
 }, false);
 
 fullScreenBtn.addEventListener("touchtart", (event) => {
-  handlePlayButton();
+
   enterFullScreen(videoBckg);
+  screen.orientation.lock("landscape-primary")
+		.then(function() {
+      handlePlayButton();
+		})
+		.catch(function(error) {
+			alert(error);
+		});
   // disableMute();
 
 }, false);
