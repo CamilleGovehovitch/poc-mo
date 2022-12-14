@@ -5,17 +5,24 @@ const videoBckg = document.getElementById('videoBckg');
 const bckContainer = document.getElementById('bckContainer');
 const mobileWidth = 426;
 // var playPromise = videoBckg.play();
+let browserName;
+ 
 
 window.addEventListener('load', (event) => {
   videoBckg.src = './assets/video/airfrance-klm1.m4v';
+  if (browserName === 'chrome') {
+    // videoBckg.muted = false;
+  }
 });
 
 bckContainer.addEventListener('click', (event) => {
   playBtn.classList.remove('playing');
+  videoBckg.muted = false;
 })
 
 bckContainer.addEventListener('touchtart', (event) => {
   playBtn.classList.remove('playing');
+  enableMute();
 })
 
 playBtn.addEventListener("click", (event) => {
@@ -60,3 +67,32 @@ function handlePlayButton() {
     playBtn.classList.add("playing");
   }
 }
+
+function fnBrowserDetect(){
+                 
+  let userAgent = navigator.userAgent;
+  
+  if(userAgent.match(/chrome|chromium|crios/i)){
+      browserName = "chrome";
+    }else if(userAgent.match(/firefox|fxios/i)){
+      browserName = "firefox";
+    }  else if(userAgent.match(/safari/i)){
+      browserName = "safari";
+    }else if(userAgent.match(/opr\//i)){
+      browserName = "opera";
+    } else if(userAgent.match(/edg/i)){
+      browserName = "edge";
+    }else{
+      browserName="No browser detection";
+    }
+  
+return browserName;
+}
+
+function enableMute() { 
+  videoBckg.muted = true;
+} 
+
+function disableMute() { 
+  videoBckg.muted = false;
+} 
