@@ -4,50 +4,31 @@ const videoContainer = document.getElementById('videoContainer');
 const videoBckg = document.getElementById('videoBckg');
 const bckContainer = document.getElementById('bckContainer');
 const mobileWidth = 426;
+// var playPromise = videoBckg.play();
 
 window.addEventListener('load', (event) => {
-  let browserName =   fnBrowserDetect();
-  console.log('hello');
-  // videoBckg.src = './assets/video/WhatsApp.mp4';
-  videoBckg.src = './assets/video/carte-seasons-greetings-happy-new-year.mp4';
-  // videoBckg.src = './assets/video/carte-seasons-greetings-happy-new-year2.mp4';
-  // enterFullScreen(videoBckg);
-  if (window.innerWidth < mobileWidth && screen.orientation.type === 'portrait-primary') {
-    // screen.orientation.type = 'landscape-primary';
-    console.log(screen.orientation.lock);
-  } else {
-    console.log(screen.orientation.lock);
-  }
-  videoBckg.play(videoBckg);
+  videoBckg.src = './assets/video/airfrance-klm1.m4v';
 });
 
 bckContainer.addEventListener('click', (event) => {
-  enterFullScreen(videoBckg);
-})
-bckContainer.addEventListener('touchtart', (event) => {
-  enterFullScreen(videoBckg);
+  playBtn.classList.remove('playing');
 })
 
-function fnBrowserDetect(){
-                 
-  let userAgent = navigator.userAgent;
-  let browserName;
-  
-  if(userAgent.match(/chrome|chromium|crios/i)){
-      browserName = "chrome";
-    }else if(userAgent.match(/firefox|fxios/i)){
-      browserName = "firefox";
-    }  else if(userAgent.match(/safari/i)){
-      browserName = "safari";
-    }else if(userAgent.match(/opr\//i)){
-      browserName = "opera";
-    } else if(userAgent.match(/edg/i)){
-      browserName = "edge";
-    }else{
-      browserName = "No browser detection";
-    }
-    return browserName;
-}
+bckContainer.addEventListener('touchtart', (event) => {
+  playBtn.classList.remove('playing');
+})
+
+playBtn.addEventListener("click", (event) => {
+  handlePlayButton();
+  enterFullScreen(videoBckg);
+
+}, false);
+
+playBtn.addEventListener("touchtart", (event) => {
+  handlePlayButton();
+  enterFullScreen(videoBckg);
+
+}, false);
 
 function enterFullScreen(element) {
   if(element.requestFullscreen) {
@@ -61,10 +42,21 @@ function enterFullScreen(element) {
   }
 };
 
-document.addEventListener('fullscreenchange', (event) => {
-  if (document.fullscreenElement) {
-    console.log('Entered fullscreen:', document.fullscreenElement);
-  } else {
-    console.log('Exited fullscreen.');
+
+async function playVideo() {
+  try {
+    await videoBckg.play();
+    playBtn.classList.add("playing");
+  } catch (err) {
+    playBtn.classList.remove("playing");
   }
-});
+}
+
+function handlePlayButton() {
+  if (videoBckg.paused) {
+    playVideo();
+  } else {
+    videoBckg.pause();
+    playBtn.classList.add("playing");
+  }
+}

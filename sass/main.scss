@@ -8,7 +8,7 @@
   // height: 100vh;
   .bck-container {
     // width: 100%;
-    #videoBckg {
+    .videoBckg {
       position: absolute;
       top: 0;
       left: 0;
@@ -16,7 +16,19 @@
       height: 100%;
       object-fit: cover;
     }
-  }
+    i {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      font-size: 50px;
+      color: white;
+      transition: color 350ms ease-in;
+      z-index: 999;
+      &:hover {
+        color: lighten(black, 30);
+      }
+    }
+    }
 
 
 
@@ -92,7 +104,7 @@
             color: #338FBE;
             transition: color 350ms ease-in;
             // &:hover {
-            //   color: darken(#338FBE, 30);
+            //   color: lighten(#338FBE, 30);
             // }
           }
         }
@@ -129,4 +141,16 @@
 }
 .playing {
   opacity: 0;
+}
+
+.landscape-mod {
+  position: absolute;
+  transform: rotate(90deg);
+  transform-origin: bottom left;
+  width: 100vh;
+  height: 100vw;
+  margin-top: -100vw;
+  object-fit: cover;
+  z-index: 4;
+  visibility: visible;
 }
