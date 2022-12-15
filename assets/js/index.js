@@ -12,11 +12,17 @@ let currentMode = screen.orientation;
 let browserName;
  
 
-window.addEventListener('load', (event) => {
+document.addEventListener('load', (event) => {
   videoBckg.src = './assets/video/airfrance-klm1.m4v';
   var current_mode = screen.orientation;
-  console.log(currentMode.type)
-  console.log(currentMode.angle)
+  myScreenOrientation.lock("landscape-primary")
+		.then(function() {
+      // handlePlayButton();
+      enterFullScreen(videoBckg);
+		})
+		.catch(function(error) {
+			alert(error);
+		});
 });
 
 fullScreenBtn.addEventListener("click", (event) => {
