@@ -21,7 +21,7 @@ window.addEventListener('load', (event) => {
 
 fullScreenBtn.addEventListener("click", (event) => {
   handlePlayButton();
-  // enterFullScreen(videoBckg);
+  enterFullScreen(videoBckg);
   // disableMute();
   
 }, false);
