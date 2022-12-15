@@ -87,7 +87,7 @@
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
   position: relative;
-  top: 20px;
+  top: 24px;
 }
 .container .container-social-video .orga .social-network {
   margin-right: auto;
