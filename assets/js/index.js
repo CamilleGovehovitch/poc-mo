@@ -6,7 +6,7 @@ const bckContainer = document.getElementById('bckContainer');
 const mobileWidth = 426;
 const fullScreenBtn = document.getElementById('fullScreenBtn');
 let myScreenOrientation = window.screen.orientation;
-
+let currentMode = screen.orientation;
 
 // var playPromise = videoBckg.play();
 let browserName;
@@ -15,13 +15,13 @@ let browserName;
 window.addEventListener('load', (event) => {
   videoBckg.src = './assets/video/airfrance-klm1.m4v';
   var current_mode = screen.orientation;
-  console.log(current_mode.type)
-  console.log(current_mode.angle)
+  console.log(currentMode.type)
+  console.log(currentMode.angle)
 });
 
 fullScreenBtn.addEventListener("click", (event) => {
   handlePlayButton();
-  enterFullScreen(videoBckg);
+  // enterFullScreen(videoBckg);
   // disableMute();
   
 }, false);
@@ -39,6 +39,14 @@ fullScreenBtn.addEventListener("touchtart", (event) => {
 		});
   
 }, false);
+
+// Check change orientation
+screen.orientation.addEventListener("change", function() {
+  if (currentMode.type = 'portrait-primary') {
+    videoBckg.pause();
+  }
+  console.log('hey');
+});
 
 function enterFullScreen(element) {
   if(element.requestFullscreen) {
