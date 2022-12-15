@@ -109,12 +109,12 @@
 }
 @media screen and (min-width: 375px) {
   .container .container-social-video .orga {
-    top: 31px;
+    top: 34px;
   }
 }
 @media screen and (min-width: 425px) {
   .container .container-social-video .orga {
-    top: 35px;
+    top: 39px;
   }
 }
 @media screen and (min-width: 768px) {
