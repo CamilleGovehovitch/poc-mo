@@ -24,14 +24,16 @@ fullScreenBtn.addEventListener("click", (event) => {
   enterFullScreen(videoBckg);
   // disableMute();
   
+  
 }, false);
 
 fullScreenBtn.addEventListener("touchtart", (event) => {
   screen.orientation.unlock();
+  handlePlayButton();
   browserName = fnBrowserDetect();
   myScreenOrientation.lock("landscape-primary")
 		.then(function() {
-      handlePlayButton();
+      // handlePlayButton();
       enterFullScreen(videoBckg);
 		})
 		.catch(function(error) {
@@ -41,13 +43,14 @@ fullScreenBtn.addEventListener("touchtart", (event) => {
 }, false);
 
 // Check change orientation
-screen.orientation.addEventListener("change", function() {
-  if (currentMode.type = 'portrait-primary') {
-    videoBckg.pause();
-  }
-  console.log('hey');
-});
+// screen.orientation.addEventListener("change", function() {
+//   if (currentMode.type = 'portrait-primary') {
+//     videoBckg.pause();
+//   }
+//   console.log('hey');
+// });
 
+// check browser name
 function enterFullScreen(element) {
   if(element.requestFullscreen) {
     element.requestFullscreen();
@@ -61,6 +64,7 @@ function enterFullScreen(element) {
   }
 };
 
+// play video
 async function playVideo() {
   try {
     await videoBckg.play();
