@@ -62,7 +62,7 @@
 .container .container-social-video {
   position: absolute;
   width: 100%;
-  top: 62%;
+  bottom: 0;
 }
 .container .container-social-video .orga {
   display: flex;
