@@ -27,12 +27,12 @@ fullScreenBtn.addEventListener("click", (event) => {
 }, false);
 
 fullScreenBtn.addEventListener("touchtart", (event) => {
-  enterFullScreen(videoBckg);
-  browserName = fnBrowserDetect();
   screen.orientation.unlock();
+  browserName = fnBrowserDetect();
   myScreenOrientation.lock("landscape-primary")
 		.then(function() {
       handlePlayButton();
+      enterFullScreen(videoBckg);
 		})
 		.catch(function(error) {
 			alert(error);
