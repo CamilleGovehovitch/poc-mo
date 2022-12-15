@@ -60,7 +60,7 @@
 .container .container-social-video {
   position: absolute;
   width: 100%;
-  bottom: 36%;
+  bottom: 34%;
 }
 .container .container-social-video .orga {
   display: flex;
@@ -132,22 +132,22 @@
 }
 @media screen and (min-width: 375px) {
   .container .container-social-video {
-    bottom: 35%;
+    bottom: 33%;
   }
 }
 @media screen and (min-width: 425px) {
   .container .container-social-video {
-    bottom: 34%;
+    bottom: 32%;
   }
 }
 @media screen and (min-width: 500px) {
   .container .container-social-video {
-    top: 62%;
+    top: 63%;
   }
 }
 @media screen and (min-width: 650px) {
   .container .container-social-video {
-    top: 64%;
+    top: 65%;
   }
 }
 @media screen and (min-width: 768px) {
@@ -162,12 +162,11 @@
 }
 
 .landscape-mod {
-  position: absolute;
-  transform: rotate(90deg);
-  transform-origin: bottom left;
-  width: 100vh;
+  position: absolute !important;
+  transform: rotate(90deg) !important;
+  transform-origin: bottom left !important;
+  width: 100vh !important;
   height: 100vw;
-  margin-top: -100vw;
   object-fit: cover;
   z-index: 4;
   visibility: visible;
