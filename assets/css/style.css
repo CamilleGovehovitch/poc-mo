@@ -60,7 +60,7 @@
 .container .container-social-video {
   position: absolute;
   width: 100%;
-  bottom: 34%;
+  bottom: 30%;
 }
 .container .container-social-video .orga {
   display: flex;
@@ -128,16 +128,6 @@
 @media screen and (max-width: 319px) {
   .container .container-social-video {
     display: none;
-  }
-}
-@media screen and (min-width: 375px) {
-  .container .container-social-video {
-    bottom: 33%;
-  }
-}
-@media screen and (min-width: 425px) {
-  .container .container-social-video {
-    bottom: 32%;
   }
 }
 @media screen and (min-width: 500px) {
