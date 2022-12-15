@@ -60,13 +60,16 @@
 .container .container-social-video {
   position: absolute;
   width: 100%;
-  bottom: 30%;
+  height: 45%;
+  bottom: 0;
 }
 .container .container-social-video .orga {
   display: flex;
   justify-content: center;
   align-items: baseline;
   flex-direction: row-reverse;
+  position: absolute;
+  top: 20px;
 }
 .container .container-social-video .orga .social-network {
   margin-right: auto;
@@ -102,6 +105,21 @@
 @media screen and (min-width: 1024px) {
   .container .container-social-video .orga .social-network ul li, .container .container-social-video .orga .social-network ul a, .container .container-social-video .orga .social-network ul img {
     font-size: 50px;
+  }
+}
+@media screen and (min-width: 375px) {
+  .container .container-social-video .orga {
+    top: 31px;
+  }
+}
+@media screen and (min-width: 425px) {
+  .container .container-social-video .orga {
+    top: 35px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container .container-social-video .orga {
+    position: unset;
   }
 }
 .container .container-social-video .entity-container {
@@ -144,6 +162,12 @@
   .container .container-social-video {
     bottom: 10%;
     top: unset;
+    height: unset;
+  }
+}
+@media screen and (max-height: 20px) {
+  .container .container-social-video {
+    display: none;
   }
 }
 
